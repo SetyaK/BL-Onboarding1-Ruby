@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'activerecord'
+gem 'dotenv'
+gem 'minitest'
+gem 'mysql2'
+gem 'sqlite3'

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'dotenv/load'
+require 'active_record'
+require 'mini_store'
+
+puts MiniStore.products_count
