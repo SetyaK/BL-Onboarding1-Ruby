@@ -4,28 +4,51 @@
 This is my first project on SRE onboarding to understand the ruby gem implementation.
 
 ##SLO and SLI
-* Availability: 99%
-* Mean Response Time: < 20ms
+* Availability: To be Defined
+* Mean Response Time: To be Defined
 
 ##Architecture Diagram
 ```
-+--------+        +------------------+          +---------+
-|  App   | <--->  |  Project 1 Gem   |  <--->   |  MySql  |
-+--------+        +------------------+          +---------+
++--------+        +------------------+         +---------+
+|  App   | <--->  |  Project 1 Gem   |  <--->  |  MySql  |
++--------+        +------------------+         +---------+
 ```
 
-##Owner
+## Owner
 [Setya Kurniawan](https://github.com/SetyaK)
 
-##Contact and On-Call Information
+## Contact and On-Call Information
 [Setya Kurniawan](setya.kurniawan@bukalapak.com)
 
-##Links
+## Links
 
-##Onboarding and Development Guide
-###Setup
-1. Make sure you already have Ruby, Bundler and Git installed. See [this](https://www.ruby-lang.org/en/documentation/installation/) for guide to install Ruby. See [this](http://bundler.io/) guide to install Bundler. See [this](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for guide to install Git.
+## Onboarding and Development Guide
+### Prerequisite
+1. Git
+  [Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. Ruby
+  [Guide](https://www.ruby-lang.org/en/documentation/installation/)
+3. Bundler
+  [Guide](http://bundler.io/)
+4. Mysql
+  [Guide](https://dev.mysql.com/doc/refman/5.7/en/installing.html)
+5. Sqllite3
+### Setup
+1. Install required modules
+  `bundle install`
+2. Build gem
+  `gem build mini_store.gemspec`
+3. Find builded gem file name, install gem
+  `gem install Ministore-x.x.x.gem`
+### Development Guide
+#### Using supplied bin/
+1. Run schema
+2. Create .env file from .env.sample
+  `cp .env.sample .env`
+  Then modify it to match your configuration
+3. Run `bin/mini_store` to test the gem
+  You can also modify it to test other functionality
 
-##On-Call Runbooks
+## On-Call Runbooks
 
-##F.A.Q.
+## F.A.Q.
