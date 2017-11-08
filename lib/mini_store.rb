@@ -31,7 +31,13 @@ class MiniStore
   end
 
   def self.remove_product(id)
-    Product.destroy(id)
+    if Product.destroy(id)
+      true
+    else
+      false
+    end
+  rescue ActiveRecord::RecordNotFound
+    false
   end
 
   def self.update_product(id, name, description)
