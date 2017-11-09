@@ -2,6 +2,10 @@ require 'mini_store/data_access.rb'
 
 # The main store driver
 class MiniStore
+  def self.init_schema
+    require 'mini_store/schema.rb'
+  end
+
   def self.products
     Product.all
   end

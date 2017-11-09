@@ -1,8 +1,8 @@
 require 'simplecov'
 SimpleCov.start
 
-ENV['MS_DB_INIT_SCHEMA'] = 'true'
 require 'mini_store'
+MiniStore.init_schema
 
 describe MiniStore do
   describe '.add_product' do

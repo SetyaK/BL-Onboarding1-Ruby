@@ -11,8 +11,6 @@ ActiveRecord::Base.establish_connection(
   database: ENV['MS_DB_CATALOG']
 )
 
-require_relative 'schema.rb' if ENV['MS_DB_INIT_SCHEMA'] == 'true'
-
 # Products active record
 class Product < ActiveRecord::Base
   self.primary_key = 'product_id'
