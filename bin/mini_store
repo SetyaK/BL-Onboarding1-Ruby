@@ -3,4 +3,5 @@ require 'dotenv/load'
 require 'active_record'
 require 'mini_store'
 
+# MiniStore.init_schema
 puts MiniStore.products_count

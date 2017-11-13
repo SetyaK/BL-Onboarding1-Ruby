@@ -10,7 +10,7 @@ This is my first project on SRE onboarding to understand the ruby gem implementa
 ## Architecture Diagram
 ```
 +--------+        +------------------+         +---------+
-|  App   | <--->  |  Project 1 Gem   |  <--->  |  MySql  |
+|  App   | <--->  |  Ministore Gem   |  <--->  |  MySql  |
 +--------+        +------------------+         +---------+
 ```
 
@@ -42,12 +42,12 @@ This is my first project on SRE onboarding to understand the ruby gem implementa
   `$ gem install Ministore-x.x.x.gem`
 ### Development Guide
 #### Using supplied bin/
-1. Run schema
-2. Create .env file from .env.sample
+1. Create .env file from .env.sample
   `$ cp .env.sample .env`
   Then modify it to match your configuration
-3. Run `bin/mini_store` to test the gem
+2. Run `bin/mini_store` to test the gem
   You can also modify it to test other functionality
+  Schema can be created by add call `MiniStore.init_schema`
 
 ## On-Call Runbooks
 
